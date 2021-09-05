@@ -31,14 +31,38 @@ public class ShoppingCart {
                         System.out.println("Please select the demand amount");
                         int count = Integer.parseInt(READER.readLine());
                         shoppingCart.add(new MotherBoard(count));
-                        if(!ContinueShopping()){
-                            finishedShopping = true;
-                            break;
-                        }
+                        break;
+
+                    case(2):
+                        System.out.println("Please select the demand amount");
+                        int count2 = Integer.parseInt(READER.readLine());
+                        shoppingCart.add(new CPU(count2));
+                        break;
+
+                    case(3):
+                        System.out.println("Please select the demand amount");
+                        int count3 = Integer.parseInt(READER.readLine());
+                        shoppingCart.add(new HDD(count3));
+                        break;
+
+                    case(4):
+                        System.out.println("Please select the demand amount");
+                        int count4 = Integer.parseInt(READER.readLine());
+                        shoppingCart.add(new Memory(count4));
+                        break;
 
                     default:
-                        System.out.println("Please input the right value");
+                        System.out.println("Please input the right value!!!!!!!");
+                        continue;
                 }
+//                Ask if they want to continue shopping
+                if(!ContinueShopping()){
+                    finishedShopping = true;
+                    break;
+                }else{
+                    continue;
+                }
+
             } catch (NumberFormatException | IOException e){
                 System.out.println("Please input the right value");
             }
@@ -76,6 +100,9 @@ public class ShoppingCart {
             switch (method){
                 case(1):
                     new PayByPalPal().PaymentProcess(totalPrice);
+
+                case(2):
+                    new PayByCreditCard().PaymentProcess(totalPrice);
             }
         } catch (NumberFormatException | IOException e ) {
             System.out.println("Please input the right number");

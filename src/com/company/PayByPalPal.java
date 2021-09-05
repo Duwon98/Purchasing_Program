@@ -17,6 +17,7 @@ public class PayByPalPal implements PaymentStrategy{
     static{
         DATA_BASE.put("duwon98@naver.com","123123123");
         DATA_BASE.put("bruceha9898@gmail.com","989898");
+        DATA_BASE.put("1","1");
     }
 
     @Override
