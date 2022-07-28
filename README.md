@@ -1,6 +1,4 @@
-# Purchasing_Program
-
-Pruchasing Program for computer parts.
+# Purchasing_Program (Pruchasing Program for computer parts)
 
 ## Run Main.java program to execute the program
 ### The program will be run by commend line interface(terminal).
